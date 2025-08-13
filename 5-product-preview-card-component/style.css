@@ -63,11 +63,13 @@ section.container {
   border-radius: 8px;
   background: var(--white);;
 }
-.product-image source,
-.product-image img {
+.product-image {
   border-radius: 8px 8px 0 0;
   max-width: 100%;
   height: auto;
+}
+.product-image.desktop {
+  display: none;
 }
 .product-detail {
   box-sizing: border-box;
@@ -135,10 +137,16 @@ section.container {
   .product-detail {
     flex: 1 0 50%;
   }
-  .product-image source,
-  .product-image img {
+  .product-image {
     border-radius: 8px 0 0 8px;
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
+    max-width: 300px;
+  }
+  .product-image.mobile {
+    display: none;
+  }
+  .product-image.desktop {
+    display: block;
   }
 }
