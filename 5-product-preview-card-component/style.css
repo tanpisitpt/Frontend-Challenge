@@ -1,0 +1,144 @@
+:root {
+  --black: #1c232b;
+  --grey: #6c7289;
+  --cream: #f2eae2;
+  --white: #ffffff;
+  --green-500: #3d8168;
+  --green-700: #1a4032;
+}
+.text-preset-1 {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+}
+.text-preset-2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.text-preset-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.text-preset-4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+.text-preset-5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--cream);
+}
+section.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100svw;
+  min-height: 100svh;
+  padding: 80px 12px;
+  margin: 0 auto;
+}
+.product-preview-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 352px;
+  border-radius: 8px;
+  background: var(--white);;
+}
+.product-image source,
+.product-image img {
+  border-radius: 8px 8px 0 0;
+  max-width: 100%;
+  height: auto;
+}
+.product-detail {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+.product-about {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.tag {
+  color: var(--grey);
+}
+.product-name {
+  margin: 0;
+  color: var(--black);
+}
+.description {
+  margin: 0;
+  color: var(--grey);
+}
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.prices .sale {
+  color: var(--green-500);
+}
+.prices .original {
+  color: var(--grey);
+}
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--white);
+  background: var(--green-500);
+}
+.add-to-cart:hover {
+  cursor: pointer;
+  background-color: var(--green-700);
+}
+
+@media screen and (min-width: 768px) {
+  section.container {
+    max-width: 100%;
+  }
+  
+  .product-preview-card {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  .product-image {
+    flex: 1 0 50%;
+  }
+  .product-detail {
+    flex: 1 0 50%;
+  }
+  .product-image source,
+  .product-image img {
+    border-radius: 8px 0 0 8px;
+    max-width: 100%;
+    height: auto;
+  }
+}
